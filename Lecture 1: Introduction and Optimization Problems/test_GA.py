@@ -1,6 +1,11 @@
 import random 
+import sys
+sys.path.append('./utils')
 random.seed(0)
-from greedy_algorithm import Food, build_menu, greedy_algorithm
+
+from greedy_algorithms import greedy_algorithm
+from menu import Food, build_menu
+
 
 def test_greedy(items, constraint, key_function):
     taken, val = greedy_algorithm(items, constraint, key_function)
