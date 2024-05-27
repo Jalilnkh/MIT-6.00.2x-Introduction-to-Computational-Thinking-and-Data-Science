@@ -4,4 +4,5 @@ I going to learn about MIT 6.00.2x Introduction to Computational Thinking and Da
 |Chapter number| Topic | Status |Comments|
 |--------------|-------|--------|--------|
 |Chapter 1| Lecture 1: Introduction and Optimization Problems|Done! |The related codes and explanation are added!|
-|Chapter 2| Lecture 2: Optimization Problems |In progress ... |The related codes and explanation are being added...|
+|Chapter 2| Lecture 2: Optimization Problems |Done! |The related codes and explanation are added!|
+|Chapter 3| Lecture 3: # Lecture 3: Graph-theoretic Models |In progress ... |The related codes and explanation are being added...|
