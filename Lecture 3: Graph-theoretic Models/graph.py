@@ -1,4 +1,14 @@
 
+class Node():
+    def __init__(self, name=None) -> None:
+        self.name = name
+    
+    def get_name(self):
+        return self.name
+    
+    def __str__(self) -> str:
+        return self.name 
+
 
 class DiGraph:
     def __init__(self) -> None:
@@ -20,7 +30,10 @@ class DiGraph:
     def children(self, node):
         return self.edges[node]
     
-    def has_node(self, name):
+    def has_node(self, node):
+        return node in self.edges
+    
+    def get_node(self, name):
         for n in self.edges:
             if n.get_name() == name:
                 return n
@@ -35,18 +48,6 @@ class DiGraph:
         
         return result[:-1]
 
-
-class Node():
-    def __init__(self, name=None) -> None:
-        self.name = name
-    
-    def get_name(self):
-        return self.name
-    
-    def __str__(self) -> str:
-        return self.name 
-    
-
 class Edge():
     def __init__(self, src, dst) -> None:
         self.src = src
@@ -60,4 +61,24 @@ class Edge():
     
     def __str__(self) -> str:
         return self.src.get_name() + '->' + self.dst.get_name()
-        
+     
+
+# Example
+
+def build_city_graph(graph_type):
+    g = graph_type()
+    for node in ('Ardabil','Sarab', 'Tabriz', 'Xoi', 'Urmia', 'Sulduz', 'Savic Bulag'):
+        g.add_node(Node(node))
+    g.add_edges(Edge(g.get_node('Ardabil'), g.get_node('Sarab')))
+    g.add_edges(Edge(g.get_node('Sarab'), g.get_node('Tabriz')))
+    g.add_edges(Edge(g.get_node('Tabriz'), g.get_node('Xoi')))
+    g.add_edges(Edge(g.get_node('Xoi'), g.get_node('Urmia')))
+    g.add_edges(Edge(g.get_node('Sulduz'), g.get_node('Urmia')))
+    g.add_edges(Edge(g.get_node('Urmia'), g.get_node('Savic Bulag')))
+    g.add_edges(Edge(g.get_node('Sulduz'), g.get_node('Savic Bulag')))
+
+    return g
+
+    
+    
+    
