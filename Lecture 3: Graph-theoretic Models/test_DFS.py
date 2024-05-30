@@ -1,8 +1,3 @@
-
-import sys
-sys.path.append('../../utils')
-# Print PYTHONPATH
-print("PYTHONPATH:", sys.path)
 from graph import build_city_graph, DiGraph
 from utils.dfs import short_path, print_path
 # Add utils directory to PYTHONPATH
@@ -20,4 +15,4 @@ def test_dfs(src: str, dst: str):
 
 
 if __name__ == "__main__":
-    test_dfs('a', 'b')
+    test_dfs('Ardabil', 'Sulduz')
