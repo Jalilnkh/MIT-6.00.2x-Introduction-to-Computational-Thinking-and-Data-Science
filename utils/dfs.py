@@ -2,7 +2,7 @@
 
 
 def dfs(graph, start, end, path, shortest, to_print=False):
-    path += [start]
+    path = path + [start]
     if to_print:
         print(f'Current DFS path: {print_path(path)}')
     if start == end:
@@ -18,7 +18,7 @@ def dfs(graph, start, end, path, shortest, to_print=False):
     return shortest
 
 def short_path(graph, start, end, to_print=False):
-    return dfs(graph, start, end, {}, None, to_print)
+    return dfs(graph, start, end, [], None, to_print)
 
 
 def print_path(path):
