@@ -67,15 +67,15 @@ class Edge():
 
 def build_city_graph(graph_type):
     g = graph_type()
-    for node in ('Ardabil','Sarab', 'Tabriz', 'Xoi', 'Urmia', 'Sulduz', 'Savic Bulag'):
+    for node in ('Ardabil','Sarab', 'Tabriz', 'Xoi', 'Urmia', 'Sulduz', 'Soyug Bulag'):
         g.add_node(Node(node))
     g.add_edges(Edge(g.get_node('Ardabil'), g.get_node('Sarab')))
     g.add_edges(Edge(g.get_node('Sarab'), g.get_node('Tabriz')))
     g.add_edges(Edge(g.get_node('Tabriz'), g.get_node('Xoi')))
     g.add_edges(Edge(g.get_node('Xoi'), g.get_node('Urmia')))
     g.add_edges(Edge(g.get_node('Sulduz'), g.get_node('Urmia')))
-    g.add_edges(Edge(g.get_node('Urmia'), g.get_node('Savic Bulag')))
-    g.add_edges(Edge(g.get_node('Sulduz'), g.get_node('Savic Bulag')))
+    g.add_edges(Edge(g.get_node('Urmia'), g.get_node('Soyug Bulag')))
+    g.add_edges(Edge(g.get_node('Soyug Bulag'), g.get_node('Sulduz')))
 
     return g
 
