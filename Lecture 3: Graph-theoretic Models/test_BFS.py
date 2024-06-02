@@ -1,5 +1,5 @@
 from graph import build_city_graph, DiGraph
-from utils.dfs import short_path, print_path
+from utils.bfs import short_path, print_path
 
 
 def test_dfs(src: str, dst: str):
