@@ -18,3 +18,4 @@ class Field():
         x_dist, y_dist = drunk.take_step()
 
         self.drunks[drunk].move(x_dist, y_dist)
+   
