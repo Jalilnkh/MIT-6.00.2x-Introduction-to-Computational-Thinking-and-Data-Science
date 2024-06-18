@@ -7,4 +7,5 @@ I going to learn about MIT 6.00.2x Introduction to Computational Thinking and Da
 |Chapter 2| Lecture 2: Optimization Problems |Done! |The related codes and explanation are added!|
 |Chapter 3| Lecture 3: Graph-theoretic Models |Done! |The related codes and explanation are added!|
 |Chapter 4| Lecture 4: Stochastic Thinking |Done! |The related codes and explanation are added!|
-|Chapter 5| Lecture 5: Random Walks |In progress ... |The related codes and explanation are being added...|
+|Chapter 5| Lecture 5: Random Walks |Done! |The related codes and explanation are added!|
+|Chapter 6| Lecture 6: Monte Carlo Simulation |In progress ... |The related codes and explanation are being added...|
