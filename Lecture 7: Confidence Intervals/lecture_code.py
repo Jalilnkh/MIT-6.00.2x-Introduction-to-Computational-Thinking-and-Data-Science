@@ -29,3 +29,12 @@ def get_mean_std(data):
     mean = np.mean(data)
     std = np.std(data)
     return mean, std
+
+def throw_needles(num_needles):
+    in_circle = 0
+    for _ in range(1, num_needles+1, 1):
+        x = random.random()
+        y = random.random()
+        if (x*x + y*y)**0.5 <=1.0:
+            in_circle += 1
+    return 4*(in_circle/float(num_needles))
