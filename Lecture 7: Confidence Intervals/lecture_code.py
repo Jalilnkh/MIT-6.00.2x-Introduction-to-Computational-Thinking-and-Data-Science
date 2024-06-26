@@ -1,6 +1,7 @@
 import random
 import pylab
 import numpy as np
+import math 
 
 def plot_mean(num_dice, num_rolls, num_bins, legend, color, style):
     means = []
@@ -59,3 +60,8 @@ def est_pi(precision, num_trails):
         cur_est, s_dev = get_est(num_needles, num_trails)
         num_needles *= 2
     return cur_est
+
+def std_dev(estimates):
+    mean = sum(estimates) / len(estimates)
+    variance = sum((x - mean) ** 2 for x in estimates) / len(estimates)
+    return math.sqrt(variance)
