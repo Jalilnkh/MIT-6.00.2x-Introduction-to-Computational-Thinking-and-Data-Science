@@ -38,3 +38,24 @@ def throw_needles(num_needles):
         if (x*x + y*y)**0.5 <=1.0:
             in_circle += 1
     return 4*(in_circle/float(num_needles))
+
+def get_est(num_needles, num_trails):
+    estimates = []
+    for t in range(num_trails):
+        pi_guess = throw_needles(num_needles)
+        estimates.append(pi_guess)
+    s_dev = std_dev(estimates)
+    cur_est = sum(estimates)/len(estimates)
+    print(f'Est. = {str(cur_est)} \
+        Std. dev. = {str(round(s_dev, 6))}\
+        , Needles = {str(num_needles)}')
+
+    return (cur_est, s_dev)
+
+def est_pi(precision, num_trails):
+    num_needles = 1000
+    s_dev = precision
+    while s_dev >= precision/2:
+        cur_est, s_dev = get_est(num_needles, num_trails)
+        num_needles *= 2
+    return cur_est
