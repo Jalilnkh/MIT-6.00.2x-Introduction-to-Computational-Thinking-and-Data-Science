@@ -10,4 +10,5 @@ I going to learn about MIT 6.00.2x Introduction to Computational Thinking and Da
 |Chapter 5| Lecture 5: Random Walks |Done! |The related codes and explanation are added!|
 |Chapter 6| Lecture 6: Monte Carlo Simulation |Done! |The related codes and explanation are added!|
 |Chapter 7| Lecture 7: Confidence Intervals |Done! |The related codes and explanation are added!|
-|Chapter 8| Lecture 8: Sampling and Standard Error |In progress ... |The related codes and explanation are being added...|
+|Chapter 8| Lecture 8: Sampling and Standard Error |Done! |The related codes and explanation are added!|
+|Chapter 9| Lecture 9: Understanding Experimental Data |In progress ... |The related codes and explanation are being added...|
