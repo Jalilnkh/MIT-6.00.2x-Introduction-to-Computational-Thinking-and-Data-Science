@@ -22,7 +22,7 @@ def plot_data(dist, mass, file_name=None):
         label= 'Measured displacements')
     label_plot()
 
-def fit_data(dist, mass, degree=1, file_name=None):
+def fit_data(dist, mass, degree=1, file_name=None, model_label='Linear Model'):
     x_vals, y_vals = get_data(file_name) if file_name else dist, mass
     x_vals = pylab.array(x_vals)
     y_vals = pylab.array(y_vals)
@@ -33,6 +33,6 @@ def fit_data(dist, mass, degree=1, file_name=None):
         x_vals, 
         pylab.polyval(model, x_vals),
         'r', 
-        label=f'Quadratic Model')
+        label=model_label)
     pylab.legend(loc= 'best')
     
