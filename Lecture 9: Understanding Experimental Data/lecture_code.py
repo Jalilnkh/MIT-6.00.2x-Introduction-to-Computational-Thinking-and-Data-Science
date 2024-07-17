@@ -1,5 +1,7 @@
 import pylab
 import numpy as np
+import random
+
 
 def get_data():
     pass
@@ -63,4 +65,27 @@ def r_squared(observed, predicted):
     return 1 - (mean_error/np.var(observed))
 
 
+def gen_noisy_parabolic_data(a, b, c, x_vals, f_name):
+    y_vals = []
+    for x in x_vals:
+        theorical_val = a*x**2 + b*x + c
+        y_vals.append(theorical_val + random.gauss(0, 35))
     
+    f = open(f_name, 'w')
+    f.write('x       y\n')
+    for i in range(len(y_vals)):
+        f.write(f'{str(y_vals[i])}  {str(x_vals[i])} \n')
+    f.close()
+
+def get_data(f_name):
+    x, y = [], []
+    with open(f_name, 'r') as f:
+        lines = f.readlines()
+        for i, line in enumerate(lines):
+            # ignore first line
+            if i==0:
+                continue
+            xy = line.split()
+            y.append(round(float(xy[0]),4))
+            x.append(float(xy[1]))
+    return x, y
