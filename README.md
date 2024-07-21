@@ -14,4 +14,5 @@ I going to learn about MIT 6.00.2x Introduction to Computational Thinking and Da
 |Chapter 9| Lecture 9: Understanding Experimental Data |Done! |The related codes and explanation are added!|
 |Chapter 10| Lecture 10: Understanding Experimental Data (cont.) |Done! |The related codes and explanation are added into Folder Lecture 9: ... |
 |Chapter 11| Lecture 11: Introduction to Machine Learning |Done! |The related codes and explanation are added!|
-|Chapter 12| Lecture 12: Clustering |In progress ... |The related codes and explanation are being added...|
+|Chapter 12| Lecture 12: Clustering |Done! |The related codes and explanation are added!|
+|Chapter 13| Lecture 13: Classification |In progress ... |The related codes and explanation are being added...|
