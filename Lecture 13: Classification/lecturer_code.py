@@ -1,7 +1,10 @@
 import random
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
-
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
 # Function to calculate evaluation metrics
 def get_stats(TP, FP, TN, FN):
     precision = TP / (TP + FP) if (TP + FP) > 0 else 0
@@ -53,3 +56,15 @@ def random_splits(examples, method, num_splits, to_print=True):
     get_stats(TP/num_splits, FP/num_splits, TN/num_splits, FN/num_splits)
     return TP/num_splits, FP/num_splits, TN/num_splits, FN/num_splits
 
+# Logistic regression classification method
+def logistic_regression_classification(training_set, test_set):
+    X_train, y_train = zip(*training_set)
+    X_test, y_test = zip(*test_set)
+    
+    # Standardize the features
+    pipeline = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000))
+    pipeline.fit(X_train, y_train)
+    y_pred = pipeline.predict(X_test)
+    
+    tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
+    return tp, fp, tn, fn
