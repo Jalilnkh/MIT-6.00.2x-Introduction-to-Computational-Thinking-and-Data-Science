@@ -17,4 +17,4 @@ I going to learn about MIT 6.00.2x Introduction to Computational Thinking and Da
 |Chapter 12| Lecture 12: Clustering |Done! |The related codes and explanation are added!|
 |Chapter 13| Lecture 13: Classification |Done! |The related codes and explanation are added!|
 |Chapter 14| Lecture 14: Classification and Statistical Sins |Done! |The related codes and explanation are added!|
-|Chapter 15| Lecture 15: Statistical Sins and Wrap Up |In progress ... |The related codes and explanation are being added...|
+|Chapter 15| Lecture 15: Statistical Sins and Wrap Up |Done! |The related codes and explanation are added!|
